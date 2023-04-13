@@ -1,0 +1,13 @@
+<h2>Sentiment Analysis</h2>
+
+<form>
+  <button type="button" (click)="performAnalysis()">Analyze</button>
+</form>
+
+<div *ngIf="analysisResult">
+  <h3>Analysis Result:</h3>
+  <p>Score: {{ analysisResult.score }}</p>
+  <p>Positive Words: {{ analysisResult.positive.join(', ') }}</p>
+  <p>Negative Words: {{ analysisResult.negative.join(', ') }}</p>
+</div>
+
