@@ -6,6 +6,7 @@ import * as Sentiment from 'sentiment'; // using the AFINN-165 library
   templateUrl: './sentiment-analysis.component.html',
   styleUrls: ['./sentiment-analysis.component.css']
 })
+
 export class SentimentAnalysisComponent {
   analysisResult: any;
 
