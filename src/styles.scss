@@ -1,6 +1,6 @@
-@import "@angular/material/theming";
-@import './assets/styles/app-color-palette';
-@import './assets/styles/app-theme';
+@import "../node_modules/@angular/material/theming";
+@import "assets/styles/app-color-palette";
+@import "assets/styles/app-theme";
 
 html, body { 
    height: 100%; margin: 0; 
