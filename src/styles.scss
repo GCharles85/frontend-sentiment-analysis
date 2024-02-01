@@ -15,7 +15,7 @@ $mat-dark-theme: mat-dark-theme($app-primary, $app-accent, $app-warn);
 
 /* Load core styles which independent from theme
 It should be included once*/
-//@include app-style-core();
+@include app-style-core();
 
 html, body { 
 height: 100%; 
