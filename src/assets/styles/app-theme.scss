@@ -12,7 +12,7 @@
 
   // This mixin comes form _app-typography
   // It contains already configured typography
-  @include app-typography();
+  //@include app-typography();
 }
 
 @mixin app-theme($theme) {
