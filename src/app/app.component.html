@@ -262,7 +262,7 @@
   </div>
 
 <!-- app.component.html -->
-<app-sentiment-analysis></app-sentiment-analysis> <!--use the selector for your new component-->
+<app-sentiment-analysis (darkModeSwitched)="switchMode($event)"></app-sentiment-analysis> <!--use the selector for your new component-->
 
   <!-- Footer -->
   <footer>
