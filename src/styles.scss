@@ -1,30 +1,30 @@
-@import '~@angular/material/_theming.scss';
-@import "assets/styles/app-color-palette";
-@import "assets/styles/app-theme";
+// @import '~@angular/material/_theming.scss';
+// @import "assets/styles/app-color-palette";
+// @import "assets/styles/app-theme";
 
-html, body { 
-   height: 100%; margin: 0; 
-   font-family: Roboto, "Helvetica Neue", sans-serif; }
+// html, body { 
+//    height: 100%; margin: 0; 
+//    font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-/* Custom Theming for Angular Materials
-   For more information: https://material.angular.io/guide/theming */
+// /* Custom Theming for Angular Materials
+//    For more information: https://material.angular.io/guide/theming */
 
-/* Create the theme objects (a Sass map containin all of the palettes).*/
-$mat-light-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
-$mat-dark-theme: mat-dark-theme($app-primary, $app-accent, $app-warn);
+// /* Create the theme objects (a Sass map containin all of the palettes).*/
+// $mat-light-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
+// $mat-dark-theme: mat-dark-theme($app-primary, $app-accent, $app-warn);
 
-/* Load core styles which independent from theme
-It should be included once*/
-@include app-style-core();
+// /* Load core styles which independent from theme
+// It should be included once*/
+// @include app-style-core();
 
-html, body { 
-height: 100%; 
-margin: 0;
-}
+// html, body { 
+// height: 100%; 
+// margin: 0;
+// }
 
-.theme-dark {
-@include app-theme($mat-dark-theme);
-}
-.theme-light {
-@include app-theme($mat-light-theme);
-}
+// .theme-dark {
+// @include app-theme($mat-dark-theme);
+// }
+// .theme-light {
+// @include app-theme($mat-light-theme);
+// }
