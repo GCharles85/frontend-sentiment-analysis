@@ -22,7 +22,7 @@
         ],
         "styles": [
           "src/custom-theme.scss",
-          "./styles.css"
+          "src/styles.scss"
         ],
         "scripts": []
       },
@@ -87,7 +87,7 @@
           "src/assets"
         ],
         "styles": [
-          "./styles.css"
+          "src/styles.scss"
         ],
         "scripts": []
       }
