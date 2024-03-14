@@ -1,0 +1,26 @@
+Failed to start or connect to the Nx Daemon process.
+
+Messages from the log:
+[NX Daemon Server] - 2024-03-12T23:45:31.698Z - [WATCHER]: 0 file(s) created or restored, 2 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-03-12T23:45:38.323Z - [REQUEST]: Updated file-hasher based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-03-12T23:45:38.359Z - Time taken for 'hash changed files from watcher' 206.50159999728203ms
+[NX Daemon Server] - 2024-03-12T23:45:38.420Z - [WATCHER]: 0 file(s) created or restored, 2 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-03-12T23:45:45.106Z - [REQUEST]: Updated file-hasher based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-03-12T23:45:45.145Z - Time taken for 'hash changed files from watcher' 270.7701999992132ms
+[NX Daemon Server] - 2024-03-12T23:45:45.219Z - [WATCHER]: 0 file(s) created or restored, 2 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-03-12T23:45:51.791Z - [REQUEST]: Updated file-hasher based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-03-12T23:45:51.831Z - Time taken for 'hash changed files from watcher' 151.89620000123978ms
+[NX Daemon Server] - 2024-03-12T23:45:51.902Z - [WATCHER]: 0 file(s) created or restored, 2 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-03-12T23:45:58.482Z - [REQUEST]: Updated file-hasher based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-03-12T23:45:58.542Z - Time taken for 'hash changed files from watcher' 157.88079999387264ms
+[NX Daemon Server] - 2024-03-12T23:45:58.672Z - [WATCHER]: 0 file(s) created or restored, 2 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-03-12T23:46:05.268Z - [REQUEST]: Updated file-hasher based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-03-12T23:46:05.306Z - Time taken for 'hash changed files from watcher' 188.11830000579357ms
+[NX Daemon Server] - 2024-03-12T23:46:05.368Z - [WATCHER]: 0 file(s) created or restored, 2 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-03-12T23:46:12.013Z - [REQUEST]: Updated file-hasher based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-03-12T23:46:12.067Z - Time taken for 'hash changed files from watcher' 228.7415999919176ms
+[NX Daemon Server] - 2024-03-12T23:46:12.137Z - [WATCHER]: 0 file(s) created or restored, 2 file(s) modified, 0 file(s) deleted
+
+
+
+More information: /mnt/c/Users/Gchar/Documents/NEU/CORAAL_SENTIMENT_ANALYSIS/CORAAL_SENTIMENT_ANALYSIS/.nx/cache/d/daemon.log

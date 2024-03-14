@@ -1,0 +1,1430 @@
+{
+  "version": "5.1",
+  "nxVersion": "16.2.2",
+  "deps": {
+    "@angular/animations": "^15.0.0",
+    "@angular/cdk": "^15.2.9",
+    "@angular/common": "^15.0.0",
+    "@angular/compiler": "^15.0.0",
+    "@angular/core": "^15.0.0",
+    "@angular/forms": "^15.0.0",
+    "@angular/material": "^15.2.9",
+    "@angular/platform-browser": "^15.0.0",
+    "@angular/platform-browser-dynamic": "^15.0.0",
+    "@angular/router": "^15.0.0",
+    "rxjs": "~7.5.0",
+    "sentiment": "^5.0.2",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.12.0",
+    "@angular-devkit/build-angular": "^15.0.4",
+    "@angular-devkit/core": "~15.0.4",
+    "@angular-devkit/schematics": "~15.0.4",
+    "@angular/cli": "~15.0.4",
+    "@angular/compiler-cli": "^15.0.0",
+    "@nx/angular": "16.2.2",
+    "@nx/workspace": "16.2.2",
+    "@schematics/angular": "~15.0.4",
+    "@types/jasmine": "~4.3.0",
+    "@types/sentiment": "^5.0.1",
+    "jasmine-core": "~4.5.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.0.0",
+    "nx": "16.2.2",
+    "nx-cloud": "latest",
+    "typescript": "~4.8.2"
+  },
+  "pathMappings": {},
+  "nxJsonPlugins": [],
+  "nodes": {
+    "CORAAL_Sentiment_Analysis": {
+      "name": "CORAAL_Sentiment_Analysis",
+      "type": "app",
+      "data": {
+        "$schema": "node_modules/nx/schemas/project-schema.json",
+        "name": "CORAAL_Sentiment_Analysis",
+        "projectType": "application",
+        "generators": {},
+        "sourceRoot": "src",
+        "prefix": "app",
+        "targets": {
+          "ng": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "ng"
+            }
+          },
+          "start": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "start"
+            }
+          },
+          "build": {
+            "dependsOn": [
+              "^build"
+            ],
+            "inputs": [
+              "production",
+              "^production"
+            ],
+            "executor": "@angular-devkit/build-angular:browser",
+            "options": {
+              "outputPath": "dist/coraal-sentiment-analysis",
+              "index": "src/index.html",
+              "main": "src/main.ts",
+              "polyfills": [
+                "zone.js"
+              ],
+              "tsConfig": "tsconfig.app.json",
+              "assets": [
+                "src/favicon.ico",
+                "src/assets"
+              ],
+              "styles": [
+                "src/custom-theme.scss",
+                "src/styles.scss"
+              ],
+              "scripts": []
+            },
+            "configurations": {
+              "production": {
+                "budgets": [
+                  {
+                    "type": "initial",
+                    "maximumWarning": "500kb",
+                    "maximumError": "1mb"
+                  },
+                  {
+                    "type": "anyComponentStyle",
+                    "maximumWarning": "2kb",
+                    "maximumError": "4kb"
+                  }
+                ],
+                "outputHashing": "all"
+              },
+              "development": {
+                "buildOptimizer": false,
+                "optimization": false,
+                "vendorChunk": true,
+                "extractLicenses": false,
+                "sourceMap": true,
+                "namedChunks": true
+              }
+            },
+            "defaultConfiguration": "production",
+            "outputs": [
+              "{options.outputPath}"
+            ]
+          },
+          "watch": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "watch"
+            }
+          },
+          "test": {
+            "inputs": [
+              "default",
+              "^production"
+            ],
+            "executor": "@angular-devkit/build-angular:karma",
+            "options": {
+              "polyfills": [
+                "zone.js",
+                "zone.js/testing"
+              ],
+              "tsConfig": "tsconfig.spec.json",
+              "assets": [
+                "src/favicon.ico",
+                "src/assets"
+              ],
+              "styles": [
+                "src/styles.scss"
+              ],
+              "scripts": []
+            },
+            "configurations": {}
+          },
+          "serve": {
+            "executor": "@angular-devkit/build-angular:dev-server",
+            "configurations": {
+              "production": {
+                "browserTarget": "CORAAL_Sentiment_Analysis:build:production"
+              },
+              "development": {
+                "browserTarget": "CORAAL_Sentiment_Analysis:build:development"
+              }
+            },
+            "defaultConfiguration": "development"
+          },
+          "extract-i18n": {
+            "executor": "@angular-devkit/build-angular:extract-i18n",
+            "options": {
+              "browserTarget": "CORAAL_Sentiment_Analysis:build"
+            }
+          }
+        },
+        "root": ".",
+        "implicitDependencies": [],
+        "tags": [],
+        "files": [
+          {
+            "file": ".editorconfig",
+            "hash": "6686520031028425313"
+          },
+          {
+            "file": ".gitignore",
+            "hash": "13044518069027839699"
+          },
+          {
+            "file": ".nx/cache/d/daemon-error.log",
+            "hash": "2625616263194673193"
+          },
+          {
+            "file": ".nx/cache/d/daemon.log",
+            "hash": "12979567282113263424"
+          },
+          {
+            "file": ".nx/cache/d/disabled",
+            "hash": "4664556114322093609"
+          },
+          {
+            "file": ".nx/cache/d/server-process.json",
+            "hash": "13906196985009161312"
+          },
+          {
+            "file": ".nx/cache/lockfile.hash",
+            "hash": "8487995223667200753"
+          },
+          {
+            "file": ".nx/cache/nxdeps.json",
+            "hash": "1470111576298134849"
+          },
+          {
+            "file": ".nx/cache/nxdeps.json~027c668e",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": ".nx/cache/nxdeps.json~03609355",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": ".nx/cache/nxdeps.json~04e83250",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": ".nx/cache/nxdeps.json~111706a2",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": ".nx/cache/nxdeps.json~11ba79ba",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": ".nx/cache/nxdeps.json~15151c0a",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": ".nx/cache/nxdeps.json~18b5c7b2",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": ".nx/cache/nxdeps.json~1b16ade0",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": ".nx/cache/nxdeps.json~25887abf",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": ".nx/cache/nxdeps.json~2ce201ad",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": ".nx/cache/nxdeps.json~2d2d4cd5",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": ".nx/cache/nxdeps.json~310e7de0",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": ".nx/cache/nxdeps.json~3a1b3e80",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": ".nx/cache/nxdeps.json~3aa3a7b0",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": ".nx/cache/nxdeps.json~3acbfc84",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": ".nx/cache/nxdeps.json~3b4b9458",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": ".nx/cache/nxdeps.json~3c74f577",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": ".nx/cache/nxdeps.json~3f07ddcc",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": ".nx/cache/nxdeps.json~439313bb",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": ".nx/cache/nxdeps.json~4688d020",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": ".nx/cache/nxdeps.json~4aecdcb2",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": ".nx/cache/nxdeps.json~4ddf2ab7",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": ".nx/cache/nxdeps.json~62469bfc",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": ".nx/cache/nxdeps.json~6463e456",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": ".nx/cache/nxdeps.json~89d9f644",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": ".nx/cache/nxdeps.json~9576485b",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": ".nx/cache/nxdeps.json~98059ffc",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": ".nx/cache/nxdeps.json~a538b31e",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": ".nx/cache/nxdeps.json~a6ba5c59",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": ".nx/cache/nxdeps.json~b0c1f793",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": ".nx/cache/nxdeps.json~b22d55b2",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": ".nx/cache/nxdeps.json~b59943d7",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": ".nx/cache/nxdeps.json~b94eef7b",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": ".nx/cache/nxdeps.json~b988f986",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": ".nx/cache/nxdeps.json~c0422c89",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": ".nx/cache/nxdeps.json~c3e29ad6",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": ".nx/cache/nxdeps.json~c4177974",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": ".nx/cache/nxdeps.json~c9b06886",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": ".nx/cache/nxdeps.json~ce5f78fa",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": ".nx/cache/nxdeps.json~d9f76ba0",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": ".nx/cache/nxdeps.json~f34bbf44",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": ".nx/cache/nxdeps.json~f79ae57d",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": ".vscode/extensions.json",
+            "hash": "12343942279124280405"
+          },
+          {
+            "file": ".vscode/launch.json",
+            "hash": "4815948323043747099"
+          },
+          {
+            "file": ".vscode/tasks.json",
+            "hash": "5336636969995539451"
+          },
+          {
+            "file": "angular.json",
+            "hash": "12376253921557580171"
+          },
+          {
+            "file": "CORAAL_Sentiment_Analysis.code-workspace",
+            "hash": "7161647159204597078"
+          },
+          {
+            "file": "nx.json",
+            "hash": "8149731501069858755"
+          },
+          {
+            "file": "package-lock.json",
+            "hash": "528611453622519237"
+          },
+          {
+            "file": "package.json",
+            "hash": "8999740000512501744",
+            "dependencies": [
+              {
+                "source": "CORAAL_Sentiment_Analysis",
+                "target": "npm:@angular/animations",
+                "type": "static"
+              },
+              {
+                "source": "CORAAL_Sentiment_Analysis",
+                "target": "npm:@angular/cdk",
+                "type": "static"
+              },
+              {
+                "source": "CORAAL_Sentiment_Analysis",
+                "target": "npm:@angular/common",
+                "type": "static"
+              },
+              {
+                "source": "CORAAL_Sentiment_Analysis",
+                "target": "npm:@angular/compiler",
+                "type": "static"
+              },
+              {
+                "source": "CORAAL_Sentiment_Analysis",
+                "target": "npm:@angular/core",
+                "type": "static"
+              },
+              {
+                "source": "CORAAL_Sentiment_Analysis",
+                "target": "npm:@angular/forms",
+                "type": "static"
+              },
+              {
+                "source": "CORAAL_Sentiment_Analysis",
+                "target": "npm:@angular/material",
+                "type": "static"
+              },
+              {
+                "source": "CORAAL_Sentiment_Analysis",
+                "target": "npm:@angular/platform-browser",
+                "type": "static"
+              },
+              {
+                "source": "CORAAL_Sentiment_Analysis",
+                "target": "npm:@angular/platform-browser-dynamic",
+                "type": "static"
+              },
+              {
+                "source": "CORAAL_Sentiment_Analysis",
+                "target": "npm:@angular/router",
+                "type": "static"
+              },
+              {
+                "source": "CORAAL_Sentiment_Analysis",
+                "target": "npm:rxjs",
+                "type": "static"
+              },
+              {
+                "source": "CORAAL_Sentiment_Analysis",
+                "target": "npm:sentiment",
+                "type": "static"
+              },
+              {
+                "source": "CORAAL_Sentiment_Analysis",
+                "target": "npm:tslib",
+                "type": "static"
+              },
+              {
+                "source": "CORAAL_Sentiment_Analysis",
+                "target": "npm:zone.js",
+                "type": "static"
+              },
+              {
+                "source": "CORAAL_Sentiment_Analysis",
+                "target": "npm:@angular-devkit/build-angular",
+                "type": "static"
+              },
+              {
+                "source": "CORAAL_Sentiment_Analysis",
+                "target": "npm:@angular-devkit/core",
+                "type": "static"
+              },
+              {
+                "source": "CORAAL_Sentiment_Analysis",
+                "target": "npm:@angular-devkit/schematics",
+                "type": "static"
+              },
+              {
+                "source": "CORAAL_Sentiment_Analysis",
+                "target": "npm:@angular/cli",
+                "type": "static"
+              },
+              {
+                "source": "CORAAL_Sentiment_Analysis",
+                "target": "npm:@angular/compiler-cli",
+                "type": "static"
+              },
+              {
+                "source": "CORAAL_Sentiment_Analysis",
+                "target": "npm:@nx/angular",
+                "type": "static"
+              },
+              {
+                "source": "CORAAL_Sentiment_Analysis",
+                "target": "npm:@nx/workspace",
+                "type": "static"
+              },
+              {
+                "source": "CORAAL_Sentiment_Analysis",
+                "target": "npm:@schematics/angular",
+                "type": "static"
+              },
+              {
+                "source": "CORAAL_Sentiment_Analysis",
+                "target": "npm:@types/jasmine",
+                "type": "static"
+              },
+              {
+                "source": "CORAAL_Sentiment_Analysis",
+                "target": "npm:@types/sentiment",
+                "type": "static"
+              },
+              {
+                "source": "CORAAL_Sentiment_Analysis",
+                "target": "npm:jasmine-core",
+                "type": "static"
+              },
+              {
+                "source": "CORAAL_Sentiment_Analysis",
+                "target": "npm:karma",
+                "type": "static"
+              },
+              {
+                "source": "CORAAL_Sentiment_Analysis",
+                "target": "npm:karma-chrome-launcher",
+                "type": "static"
+              },
+              {
+                "source": "CORAAL_Sentiment_Analysis",
+                "target": "npm:karma-coverage",
+                "type": "static"
+              },
+              {
+                "source": "CORAAL_Sentiment_Analysis",
+                "target": "npm:karma-jasmine",
+                "type": "static"
+              },
+              {
+                "source": "CORAAL_Sentiment_Analysis",
+                "target": "npm:karma-jasmine-html-reporter",
+                "type": "static"
+              },
+              {
+                "source": "CORAAL_Sentiment_Analysis",
+                "target": "npm:nx",
+                "type": "static"
+              },
+              {
+                "source": "CORAAL_Sentiment_Analysis",
+                "target": "npm:nx-cloud",
+                "type": "static"
+              },
+              {
+                "source": "CORAAL_Sentiment_Analysis",
+                "target": "npm:typescript",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "project.json",
+            "hash": "14998844120810887072"
+          },
+          {
+            "file": "README.md",
+            "hash": "5184735528312252714"
+          },
+          {
+            "file": "src/_themes.scss",
+            "hash": "8551918308904305382"
+          },
+          {
+            "file": "src/app/app-routing.module.ts",
+            "hash": "6250625392482207240",
+            "dependencies": [
+              {
+                "source": "CORAAL_Sentiment_Analysis",
+                "target": "npm:@angular/core",
+                "type": "static"
+              },
+              {
+                "source": "CORAAL_Sentiment_Analysis",
+                "target": "npm:@angular/router",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "src/app/app.component.css",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": "src/app/app.component.html",
+            "hash": "13731082722464714697"
+          },
+          {
+            "file": "src/app/app.component.scss",
+            "hash": "917437126474271044"
+          },
+          {
+            "file": "src/app/app.component.spec.ts",
+            "hash": "10071861146019391911",
+            "dependencies": [
+              {
+                "source": "CORAAL_Sentiment_Analysis",
+                "target": "npm:@angular/core",
+                "type": "static"
+              },
+              {
+                "source": "CORAAL_Sentiment_Analysis",
+                "target": "npm:@angular/router",
+                "type": "static"
+              },
+              {
+                "source": "CORAAL_Sentiment_Analysis",
+                "target": "arg",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "src/app/app.component.ts",
+            "hash": "11923378466227617706",
+            "dependencies": [
+              {
+                "source": "CORAAL_Sentiment_Analysis",
+                "target": "npm:@angular/core",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "src/app/app.module.ts",
+            "hash": "9437087143149868349",
+            "dependencies": [
+              {
+                "source": "CORAAL_Sentiment_Analysis",
+                "target": "npm:@angular/core",
+                "type": "static"
+              },
+              {
+                "source": "CORAAL_Sentiment_Analysis",
+                "target": "npm:@angular/forms",
+                "type": "static"
+              },
+              {
+                "source": "CORAAL_Sentiment_Analysis",
+                "target": "npm:@angular/platform-browser",
+                "type": "static"
+              },
+              {
+                "source": "CORAAL_Sentiment_Analysis",
+                "target": "npm:@angular/material",
+                "type": "static"
+              },
+              {
+                "source": "CORAAL_Sentiment_Analysis",
+                "target": "arg",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "src/app/sentiment-analysis/sentiment-analysis.component.css",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": "src/app/sentiment-analysis/sentiment-analysis.component.html",
+            "hash": "16551351279189719895"
+          },
+          {
+            "file": "src/app/sentiment-analysis/sentiment-analysis.component.spec.ts",
+            "hash": "13374737296609173285",
+            "dependencies": [
+              {
+                "source": "CORAAL_Sentiment_Analysis",
+                "target": "npm:@angular/core",
+                "type": "static"
+              },
+              {
+                "source": "CORAAL_Sentiment_Analysis",
+                "target": "arg",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "src/app/sentiment-analysis/sentiment-analysis.component.ts",
+            "hash": "14578491535727640473",
+            "dependencies": [
+              {
+                "source": "CORAAL_Sentiment_Analysis",
+                "target": "npm:@angular/core",
+                "type": "static"
+              },
+              {
+                "source": "CORAAL_Sentiment_Analysis",
+                "target": "npm:sentiment",
+                "type": "static"
+              },
+              {
+                "source": "CORAAL_Sentiment_Analysis",
+                "target": "npm:@angular/material",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "src/app/toggle-panel/toggle-panel.component.html",
+            "hash": "17993754126992633826"
+          },
+          {
+            "file": "src/app/toggle-panel/toggle-panel.component.scss",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": "src/app/toggle-panel/toggle-panel.component.spec.ts",
+            "hash": "1897143275475013272",
+            "dependencies": [
+              {
+                "source": "CORAAL_Sentiment_Analysis",
+                "target": "npm:@angular/core",
+                "type": "static"
+              },
+              {
+                "source": "CORAAL_Sentiment_Analysis",
+                "target": "arg",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "src/app/toggle-panel/toggle-panel.component.ts",
+            "hash": "2940832474820071019",
+            "dependencies": [
+              {
+                "source": "CORAAL_Sentiment_Analysis",
+                "target": "npm:@angular/core",
+                "type": "static"
+              },
+              {
+                "source": "CORAAL_Sentiment_Analysis",
+                "target": "npm:@angular/common",
+                "type": "static"
+              },
+              {
+                "source": "CORAAL_Sentiment_Analysis",
+                "target": "npm:@angular/material",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "src/assets/.gitkeep",
+            "hash": "3244421341483603138"
+          },
+          {
+            "file": "src/assets/styles/_app-typography.scss",
+            "hash": "9972946968808860938"
+          },
+          {
+            "file": "src/assets/styles/app-color-palette.scss",
+            "hash": "14759093809168031088"
+          },
+          {
+            "file": "src/assets/styles/app-theme.scss",
+            "hash": "8273772088639002469"
+          },
+          {
+            "file": "src/favicon.ico",
+            "hash": "3464744996580215640"
+          },
+          {
+            "file": "src/index.html",
+            "hash": "6527459102341866899"
+          },
+          {
+            "file": "src/main.ts",
+            "hash": "12246588107753938993",
+            "dependencies": [
+              {
+                "source": "CORAAL_Sentiment_Analysis",
+                "target": "npm:@angular/platform-browser-dynamic",
+                "type": "static"
+              },
+              {
+                "source": "CORAAL_Sentiment_Analysis",
+                "target": "arg",
+                "type": "static"
+              }
+            ]
+          },
+          {
+            "file": "src/styles.scss",
+            "hash": "16511712364909231128"
+          },
+          {
+            "file": "tsconfig.app.json",
+            "hash": "17337579397915052279"
+          },
+          {
+            "file": "tsconfig.json",
+            "hash": "1047940026627514556"
+          },
+          {
+            "file": "tsconfig.spec.json",
+            "hash": "15575553540147145788"
+          }
+        ]
+      }
+    },
+    "arg": {
+      "name": "arg",
+      "type": "app",
+      "data": {
+        "projectType": "application",
+        "generators": {},
+        "root": "",
+        "sourceRoot": "src",
+        "prefix": "app",
+        "targets": {
+          "ng": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "ng"
+            }
+          },
+          "start": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "start"
+            }
+          },
+          "build": {
+            "dependsOn": [
+              "^build"
+            ],
+            "inputs": [
+              "production",
+              "^production"
+            ],
+            "executor": "@angular-devkit/build-angular:browser",
+            "options": {
+              "outputPath": "dist/arg",
+              "index": "src/index.html",
+              "main": "src/main.ts",
+              "polyfills": [
+                "zone.js"
+              ],
+              "tsConfig": "tsconfig.app.json",
+              "assets": [
+                "src/favicon.ico",
+                "src/assets"
+              ],
+              "styles": [
+                "@angular/material/prebuilt-themes/indigo-pink.css",
+                "src/styles.scss"
+              ],
+              "scripts": []
+            },
+            "configurations": {
+              "production": {
+                "budgets": [
+                  {
+                    "type": "initial",
+                    "maximumWarning": "500kb",
+                    "maximumError": "1mb"
+                  },
+                  {
+                    "type": "anyComponentStyle",
+                    "maximumWarning": "2kb",
+                    "maximumError": "4kb"
+                  }
+                ],
+                "outputHashing": "all"
+              },
+              "development": {
+                "buildOptimizer": false,
+                "optimization": false,
+                "vendorChunk": true,
+                "extractLicenses": false,
+                "sourceMap": true,
+                "namedChunks": true
+              }
+            },
+            "defaultConfiguration": "production"
+          },
+          "watch": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "watch"
+            }
+          },
+          "test": {
+            "inputs": [
+              "default",
+              "^production"
+            ],
+            "executor": "@angular-devkit/build-angular:karma",
+            "options": {
+              "polyfills": [
+                "zone.js",
+                "zone.js/testing"
+              ],
+              "tsConfig": "tsconfig.spec.json",
+              "assets": [
+                "src/favicon.ico",
+                "src/assets"
+              ],
+              "styles": [
+                "@angular/material/prebuilt-themes/indigo-pink.css",
+                "src/styles.scss"
+              ],
+              "scripts": []
+            },
+            "configurations": {}
+          },
+          "serve": {
+            "executor": "@angular-devkit/build-angular:dev-server",
+            "configurations": {
+              "production": {
+                "browserTarget": "arg:build:production"
+              },
+              "development": {
+                "browserTarget": "arg:build:development"
+              }
+            },
+            "defaultConfiguration": "development"
+          },
+          "extract-i18n": {
+            "executor": "@angular-devkit/build-angular:extract-i18n",
+            "options": {
+              "browserTarget": "arg:build"
+            }
+          }
+        },
+        "implicitDependencies": [],
+        "tags": [],
+        "files": []
+      }
+    }
+  },
+  "externalNodes": {
+    "npm:@angular/animations": {
+      "type": "npm",
+      "name": "npm:@angular/animations",
+      "data": {
+        "version": "^15.0.0",
+        "packageName": "@angular/animations",
+        "hash": "1724393ff06b7bf34602d1dd709f9201b83b0f2c07799a148c17957c5557aa51"
+      }
+    },
+    "npm:@angular/cdk": {
+      "type": "npm",
+      "name": "npm:@angular/cdk",
+      "data": {
+        "version": "^15.2.9",
+        "packageName": "@angular/cdk",
+        "hash": "6934f58240e216e6f3f1380b4080413a84db1f9745b5820425789a9777dac8c5"
+      }
+    },
+    "npm:@angular/common": {
+      "type": "npm",
+      "name": "npm:@angular/common",
+      "data": {
+        "version": "^15.0.0",
+        "packageName": "@angular/common",
+        "hash": "d8227062ab77c1d2e8f71046bc24bdbf76d7e5724a87004009f8162a8d31c1d4"
+      }
+    },
+    "npm:@angular/compiler": {
+      "type": "npm",
+      "name": "npm:@angular/compiler",
+      "data": {
+        "version": "^15.0.0",
+        "packageName": "@angular/compiler",
+        "hash": "e9e9efdb5c82415f75bdbe697fda3c0a34aca075259d9cd5ad562942cae3cdbb"
+      }
+    },
+    "npm:@angular/core": {
+      "type": "npm",
+      "name": "npm:@angular/core",
+      "data": {
+        "version": "^15.0.0",
+        "packageName": "@angular/core",
+        "hash": "4b48cdcc356c779f30aa42416b3160ce61281bbd6eab76fd74a3e9d41ea5d6ea"
+      }
+    },
+    "npm:@angular/forms": {
+      "type": "npm",
+      "name": "npm:@angular/forms",
+      "data": {
+        "version": "^15.0.0",
+        "packageName": "@angular/forms",
+        "hash": "d0c500d2932d9ec44ee876d453ede32497834b72887e359b9d8d2eeedb40ee95"
+      }
+    },
+    "npm:@angular/material": {
+      "type": "npm",
+      "name": "npm:@angular/material",
+      "data": {
+        "version": "^15.2.9",
+        "packageName": "@angular/material",
+        "hash": "c4f3d93d6745d2ddf41ad70a5a2bc3547c31036feec3bd069987090d0417b291"
+      }
+    },
+    "npm:@angular/platform-browser": {
+      "type": "npm",
+      "name": "npm:@angular/platform-browser",
+      "data": {
+        "version": "^15.0.0",
+        "packageName": "@angular/platform-browser",
+        "hash": "0bd452c9c340adbcdcc4635d3c34c3c4d13b25e70cfc79a293ac05f31fb39141"
+      }
+    },
+    "npm:@angular/platform-browser-dynamic": {
+      "type": "npm",
+      "name": "npm:@angular/platform-browser-dynamic",
+      "data": {
+        "version": "^15.0.0",
+        "packageName": "@angular/platform-browser-dynamic",
+        "hash": "9716f2331953432ea1c58ad86baa887e68bd2fb74b69c799c26092598452146a"
+      }
+    },
+    "npm:@angular/router": {
+      "type": "npm",
+      "name": "npm:@angular/router",
+      "data": {
+        "version": "^15.0.0",
+        "packageName": "@angular/router",
+        "hash": "649f9b0248654ddc9826d034bb2c25612cb4f79ce43ccbc8a3e9132ab85863fe"
+      }
+    },
+    "npm:rxjs": {
+      "type": "npm",
+      "name": "npm:rxjs",
+      "data": {
+        "version": "~7.5.0",
+        "packageName": "rxjs",
+        "hash": "aa112459324303e2c3a2c6033c0d5c33b5f574a48df523b7ccd42bbf2d8650b3"
+      }
+    },
+    "npm:sentiment": {
+      "type": "npm",
+      "name": "npm:sentiment",
+      "data": {
+        "version": "^5.0.2",
+        "packageName": "sentiment",
+        "hash": "3716d2d93b6485be9de6f53d15dbc53ad33229bdde6944142cbd3717da558363"
+      }
+    },
+    "npm:tslib": {
+      "type": "npm",
+      "name": "npm:tslib",
+      "data": {
+        "version": "^2.3.0",
+        "packageName": "tslib",
+        "hash": "a33e74687104ec3eee715b3039ada1f6fc526a5dbb18f125cfc6c30497bfe2b7"
+      }
+    },
+    "npm:zone.js": {
+      "type": "npm",
+      "name": "npm:zone.js",
+      "data": {
+        "version": "~0.12.0",
+        "packageName": "zone.js",
+        "hash": "91934f9b9cd518057ea9c6d03487a2bbf45c05fc157357606baf1bd86b1a65a7"
+      }
+    },
+    "npm:@angular-devkit/build-angular": {
+      "type": "npm",
+      "name": "npm:@angular-devkit/build-angular",
+      "data": {
+        "version": "^15.0.4",
+        "packageName": "@angular-devkit/build-angular",
+        "hash": "2a5cf8707cbf29f76cfc97db10a304dd662ce2d15f3c88233437433d2da71fbf"
+      }
+    },
+    "npm:@angular-devkit/core": {
+      "type": "npm",
+      "name": "npm:@angular-devkit/core",
+      "data": {
+        "version": "~15.0.4",
+        "packageName": "@angular-devkit/core",
+        "hash": "20f7b4295f801d230a7e06beb24e6571be9d59447b715743ad4e9ea16ce9a370"
+      }
+    },
+    "npm:@angular-devkit/schematics": {
+      "type": "npm",
+      "name": "npm:@angular-devkit/schematics",
+      "data": {
+        "version": "~15.0.4",
+        "packageName": "@angular-devkit/schematics",
+        "hash": "b5e60c9c101d6c3adc9249127f495cf7e87a3d4c56d7fecd55dfd4b17031fa52"
+      }
+    },
+    "npm:@angular/cli": {
+      "type": "npm",
+      "name": "npm:@angular/cli",
+      "data": {
+        "version": "~15.0.4",
+        "packageName": "@angular/cli",
+        "hash": "98a4428dcc629ec21631183d542f6d2af4a4bc7edaaee6e7929f2a649094a382"
+      }
+    },
+    "npm:@angular/compiler-cli": {
+      "type": "npm",
+      "name": "npm:@angular/compiler-cli",
+      "data": {
+        "version": "^15.0.0",
+        "packageName": "@angular/compiler-cli",
+        "hash": "da692a9e7c34f8bf17634c17044c1137e33ae05cd2ec39324447387a9b2460f5"
+      }
+    },
+    "npm:@nx/angular": {
+      "type": "npm",
+      "name": "npm:@nx/angular",
+      "data": {
+        "version": "16.2.2",
+        "packageName": "@nx/angular",
+        "hash": "4081373e3266a14b73f751a1443e097e1f3260538dd312d11b1dcc593381e0e7"
+      }
+    },
+    "npm:@nx/workspace": {
+      "type": "npm",
+      "name": "npm:@nx/workspace",
+      "data": {
+        "version": "16.2.2",
+        "packageName": "@nx/workspace",
+        "hash": "4389095738326cea6295cee93a4246d7d63d150e88463ea4a01330009b0efb86"
+      }
+    },
+    "npm:@schematics/angular": {
+      "type": "npm",
+      "name": "npm:@schematics/angular",
+      "data": {
+        "version": "~15.0.4",
+        "packageName": "@schematics/angular",
+        "hash": "f9287fad609cb54402860aa1d98c9ba72c1097a04dd7f1921ac64d1be485a2f5"
+      }
+    },
+    "npm:@types/jasmine": {
+      "type": "npm",
+      "name": "npm:@types/jasmine",
+      "data": {
+        "version": "~4.3.0",
+        "packageName": "@types/jasmine",
+        "hash": "ce510fcd60614432ce365161ba89d4f540cd5aaf5346b25c2a1a47d62f41ba84"
+      }
+    },
+    "npm:@types/sentiment": {
+      "type": "npm",
+      "name": "npm:@types/sentiment",
+      "data": {
+        "version": "^5.0.1",
+        "packageName": "@types/sentiment",
+        "hash": "9ea7c54c2b3e1c826ee4dcdc3b64db4d0884088f529d770b246aabbac1c49140"
+      }
+    },
+    "npm:jasmine-core": {
+      "type": "npm",
+      "name": "npm:jasmine-core",
+      "data": {
+        "version": "~4.5.0",
+        "packageName": "jasmine-core",
+        "hash": "fc4f0d2eb72cba1602cecc394919cfeaf05bfb48bdca3f05c8c908cb50825a62"
+      }
+    },
+    "npm:karma": {
+      "type": "npm",
+      "name": "npm:karma",
+      "data": {
+        "version": "~6.4.0",
+        "packageName": "karma",
+        "hash": "8a584d7307501c95fffb1cd2b81c55c650b95e435a6bb51187af05b110a1ed28"
+      }
+    },
+    "npm:karma-chrome-launcher": {
+      "type": "npm",
+      "name": "npm:karma-chrome-launcher",
+      "data": {
+        "version": "~3.1.0",
+        "packageName": "karma-chrome-launcher",
+        "hash": "154aa4341a483a743d7776e809d6ed5aff55349f42fea6a86aab428443c930ec"
+      }
+    },
+    "npm:karma-coverage": {
+      "type": "npm",
+      "name": "npm:karma-coverage",
+      "data": {
+        "version": "~2.2.0",
+        "packageName": "karma-coverage",
+        "hash": "d5760033f260f46003f4f93d711ef2e6cac1ecd3f02efac00842e3938a99ab25"
+      }
+    },
+    "npm:karma-jasmine": {
+      "type": "npm",
+      "name": "npm:karma-jasmine",
+      "data": {
+        "version": "~5.1.0",
+        "packageName": "karma-jasmine",
+        "hash": "6a4ff84c6001defa746d9d0d1100f75a6bd1dec87e3d7155daec7434124dda65"
+      }
+    },
+    "npm:karma-jasmine-html-reporter": {
+      "type": "npm",
+      "name": "npm:karma-jasmine-html-reporter",
+      "data": {
+        "version": "~2.0.0",
+        "packageName": "karma-jasmine-html-reporter",
+        "hash": "7772849d9dd63d9937ad59ffefdd3d1d259a60dbbfd34e673ea369b6b84db65a"
+      }
+    },
+    "npm:nx": {
+      "type": "npm",
+      "name": "npm:nx",
+      "data": {
+        "version": "16.2.2",
+        "packageName": "nx",
+        "hash": "df6b039c1148929dcfa1fd4e4e50097eb589c15fb186170f0eff0e2b4c631f5f"
+      }
+    },
+    "npm:nx-cloud": {
+      "type": "npm",
+      "name": "npm:nx-cloud",
+      "data": {
+        "version": "latest",
+        "packageName": "nx-cloud",
+        "hash": "23974aa1d7c68dcd836918b3bd0fcde21f1ed17e98b3a166ddb4d12066e481fb"
+      }
+    },
+    "npm:typescript": {
+      "type": "npm",
+      "name": "npm:typescript",
+      "data": {
+        "version": "~4.8.2",
+        "packageName": "typescript",
+        "hash": "07f511ede3f552e56c19079c370fcd1e1356221453df45eecf18258043f839c9"
+      }
+    }
+  },
+  "dependencies": {
+    "CORAAL_Sentiment_Analysis": [
+      {
+        "source": "CORAAL_Sentiment_Analysis",
+        "target": "npm:@angular/animations",
+        "type": "static"
+      },
+      {
+        "source": "CORAAL_Sentiment_Analysis",
+        "target": "npm:@angular/cdk",
+        "type": "static"
+      },
+      {
+        "source": "CORAAL_Sentiment_Analysis",
+        "target": "npm:@angular/common",
+        "type": "static"
+      },
+      {
+        "source": "CORAAL_Sentiment_Analysis",
+        "target": "npm:@angular/compiler",
+        "type": "static"
+      },
+      {
+        "source": "CORAAL_Sentiment_Analysis",
+        "target": "npm:@angular/core",
+        "type": "static"
+      },
+      {
+        "source": "CORAAL_Sentiment_Analysis",
+        "target": "npm:@angular/forms",
+        "type": "static"
+      },
+      {
+        "source": "CORAAL_Sentiment_Analysis",
+        "target": "npm:@angular/material",
+        "type": "static"
+      },
+      {
+        "source": "CORAAL_Sentiment_Analysis",
+        "target": "npm:@angular/platform-browser",
+        "type": "static"
+      },
+      {
+        "source": "CORAAL_Sentiment_Analysis",
+        "target": "npm:@angular/platform-browser-dynamic",
+        "type": "static"
+      },
+      {
+        "source": "CORAAL_Sentiment_Analysis",
+        "target": "npm:@angular/router",
+        "type": "static"
+      },
+      {
+        "source": "CORAAL_Sentiment_Analysis",
+        "target": "npm:rxjs",
+        "type": "static"
+      },
+      {
+        "source": "CORAAL_Sentiment_Analysis",
+        "target": "npm:sentiment",
+        "type": "static"
+      },
+      {
+        "source": "CORAAL_Sentiment_Analysis",
+        "target": "npm:tslib",
+        "type": "static"
+      },
+      {
+        "source": "CORAAL_Sentiment_Analysis",
+        "target": "npm:zone.js",
+        "type": "static"
+      },
+      {
+        "source": "CORAAL_Sentiment_Analysis",
+        "target": "npm:@angular-devkit/build-angular",
+        "type": "static"
+      },
+      {
+        "source": "CORAAL_Sentiment_Analysis",
+        "target": "npm:@angular-devkit/core",
+        "type": "static"
+      },
+      {
+        "source": "CORAAL_Sentiment_Analysis",
+        "target": "npm:@angular-devkit/schematics",
+        "type": "static"
+      },
+      {
+        "source": "CORAAL_Sentiment_Analysis",
+        "target": "npm:@angular/cli",
+        "type": "static"
+      },
+      {
+        "source": "CORAAL_Sentiment_Analysis",
+        "target": "npm:@angular/compiler-cli",
+        "type": "static"
+      },
+      {
+        "source": "CORAAL_Sentiment_Analysis",
+        "target": "npm:@nx/angular",
+        "type": "static"
+      },
+      {
+        "source": "CORAAL_Sentiment_Analysis",
+        "target": "npm:@nx/workspace",
+        "type": "static"
+      },
+      {
+        "source": "CORAAL_Sentiment_Analysis",
+        "target": "npm:@schematics/angular",
+        "type": "static"
+      },
+      {
+        "source": "CORAAL_Sentiment_Analysis",
+        "target": "npm:@types/jasmine",
+        "type": "static"
+      },
+      {
+        "source": "CORAAL_Sentiment_Analysis",
+        "target": "npm:@types/sentiment",
+        "type": "static"
+      },
+      {
+        "source": "CORAAL_Sentiment_Analysis",
+        "target": "npm:jasmine-core",
+        "type": "static"
+      },
+      {
+        "source": "CORAAL_Sentiment_Analysis",
+        "target": "npm:karma",
+        "type": "static"
+      },
+      {
+        "source": "CORAAL_Sentiment_Analysis",
+        "target": "npm:karma-chrome-launcher",
+        "type": "static"
+      },
+      {
+        "source": "CORAAL_Sentiment_Analysis",
+        "target": "npm:karma-coverage",
+        "type": "static"
+      },
+      {
+        "source": "CORAAL_Sentiment_Analysis",
+        "target": "npm:karma-jasmine",
+        "type": "static"
+      },
+      {
+        "source": "CORAAL_Sentiment_Analysis",
+        "target": "npm:karma-jasmine-html-reporter",
+        "type": "static"
+      },
+      {
+        "source": "CORAAL_Sentiment_Analysis",
+        "target": "npm:nx",
+        "type": "static"
+      },
+      {
+        "source": "CORAAL_Sentiment_Analysis",
+        "target": "npm:nx-cloud",
+        "type": "static"
+      },
+      {
+        "source": "CORAAL_Sentiment_Analysis",
+        "target": "npm:typescript",
+        "type": "static"
+      },
+      {
+        "source": "CORAAL_Sentiment_Analysis",
+        "target": "arg",
+        "type": "static"
+      }
+    ],
+    "arg": []
+  }
+}

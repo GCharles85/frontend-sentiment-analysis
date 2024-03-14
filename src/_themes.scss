@@ -1,0 +1,61 @@
+
+// // Custom Theming for Angular Material
+// // For more information: https://material.angular.io/guide/theming
+// @use '@angular/material' as mat;
+// // Plus imports for other components in your app.
+
+// // Include the common styles for Angular Material. We include this here so that you only
+// // have to load a single css file for Angular Material in your app.
+// // Be sure that you only ever include this mixin once!
+// @include mat.core();
+
+// // Define the palettes for your themes
+// $CORAAL_Sentiment_Analysis-primary: mat.define-palette(mat.$indigo-palette);
+// $CORAAL_Sentiment_Analysis-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+// $CORAAL_Sentiment_Analysis-warn: mat.define-palette(mat.$red-palette);
+
+// // Light theme
+// $CORAAL_Sentiment_Analysis-light-theme: mat.define-light-theme((
+//   color: (
+//     primary: $CORAAL_Sentiment_Analysis-primary,
+//     accent: $CORAAL_Sentiment_Analysis-accent,
+//     warn: $CORAAL_Sentiment_Analysis-warn,
+//   )
+// ));
+
+// // Dark theme (using contrasting colors)
+// $CORAAL_Sentiment_Analysis-dark-theme: mat.define-dark-theme((
+//   color: (
+//     primary: mat.define-palette(mat.$blue-grey-palette),
+//     accent: mat.define-palette(mat.$amber-palette),
+//     warn: mat.define-palette(mat.$deep-orange-palette),
+//   )
+// ));
+
+// // Include the common styles for both themes
+// @include mat.all-component-themes($CORAAL_Sentiment_Analysis-light-theme);
+// @include mat.all-component-themes($CORAAL_Sentiment_Analysis-dark-theme);
+
+[data-theme="light"] {
+  --header-background-color: #ffffff;
+  --header-border-color: #e5e8ea;
+  --header-menu-item-color: #231f20;
+  --header-theme-switch-background-color: #cccccc;
+  --header-theme-switch-before-background-color: #ffffff;
+  --header-theme-switch-checked-background-color: #2196f3;
+
+  --main-content-background-color: #ffffff;
+  --main-content-text-color: #231f20;
+}
+
+[data-theme="dark"] {
+  --header-background-color: #2c3c93;
+  --header-border-color: #e5e8ea;
+  --header-menu-item-color: #ffffff;
+  --header-theme-switch-background-color: #cccccc;
+  --header-theme-switch-before-background-color: #ffffff;
+  --header-theme-switch-checked-background-color: #2196f3;
+
+  --main-content-background-color: #231f20;
+  --main-content-text-color: #ffffff;
+}

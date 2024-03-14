@@ -1,29 +1,21 @@
-import { Component, Inject, Renderer2 } from '@angular/core';
-import { DOCUMENT } from '@angular/common';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+
   title = 'CORAAL_Sentiment_Analysis';
+  public isLightTheme = true;
 
-  get isDarkMode(): boolean {
-    return this.currentTheme === 'theme-dark';
+  onDarkModeSwitched() {
+    this.isLightTheme = !this.isLightTheme;
+
+    document.body.setAttribute(
+      'data-theme',
+      this.isLightTheme ? 'light' : 'dark'
+    );
   }
-
-  private currentTheme = 'theme-light';
-
-  constructor(
-    @Inject(DOCUMENT) private document: Document,
-    private renderer: Renderer2
-  ) {}
-
-  switchMode(isDarkMode: boolean) {
-    this.currentTheme = isDarkMode ? 'theme-dark' : 'theme-light';
-    this.renderer.setAttribute(this.document.body, 'class', this.currentTheme);
-    localStorage.setItem('activeTheme', this.currentTheme);
-  }
-
 }

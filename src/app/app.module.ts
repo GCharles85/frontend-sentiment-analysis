@@ -8,11 +8,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SentimentAnalysisComponent } from './sentiment-analysis/sentiment-analysis.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TogglePanelComponent } from './toggle-panel/toggle-panel.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SentimentAnalysisComponent
+    SentimentAnalysisComponent,
+    TogglePanelComponent
   ],
   imports: [
     BrowserModule,

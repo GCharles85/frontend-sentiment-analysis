@@ -15,15 +15,15 @@ import { MatSlideToggleChange } from '@angular/material/slide-toggle';
 })
 
 export class SentimentAnalysisComponent {
-  @Input()
-  isDarkMode = false;
+  // @Input()
+  // isDarkMode = false;
 
-  @Output()
-  readonly darkModeSwitched = new EventEmitter<boolean>();
+  // @Output()
+  // readonly darkModeSwitched = new EventEmitter<boolean>();
 
-  onDarkModeSwitched({ checked }: MatSlideToggleChange) {
-    this.darkModeSwitched.emit(checked);
-  }
+  // onDarkModeSwitched({ checked }: MatSlideToggleChange) {
+  //   this.darkModeSwitched.emit(checked);
+  // }
 
   analysisResult: any;
 
